@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes Contacts</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#f0f0f0; margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh; }
+  .container { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2); text-align:center; width:90%; max-width:400px; }
+  h1 { margin-bottom:10px; }
+  p { margin-bottom:20px; color:#555; }
+  .btn { display:block; margin:10px auto; padding:12px 20px; border-radius:8px; color:#fff; text-decoration:none; font-weight:bold; width:80%; }
+  .fb { background:#1877f2; }
+  .ig { background:#e1306c; }
+  .ln { background:#0a66c2; }
+  .wa { background:#25D366; }
+  .vb { background:#665cac; }
+  .call { background:#27ae60; }
+  .map { background:#555; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Mes Contacts</h1>
+  <p>Choisissez un lien :</p>
+
+  <!-- Réseaux sociaux -->
+  <a class="btn fb" href="https://www.facebook.com/TON_PAGE_FB" target="_blank">Facebook</a>
+  <a class="btn ig" href="https://www.instagram.com/TON_COMPTE_IG" target="_blank">Instagram</a>
+  <a class="btn ln" href="https://www.linkedin.com/in/TON_PROFIL_LN" target="_blank">LinkedIn</a>
+
+  <!-- Messagerie -->
+  <a class="btn wa" href="https://wa.me/NUMERO_TEL" target="_blank">WhatsApp</a>
+  <a class="btn vb" href="viber://chat?number=%2BNUMERO_TEL" target="_blank">Viber</a>
+
+  <!-- Appel téléphonique -->
+  <a class="btn call" href="tel:+NUMERO_TEL">Appeler</a>
+
+  <!-- Localisation -->
+  <a class="btn map" href="https://www.google.com/maps?q=LATITUDE,LONGITUDE" target="_blank">Localisation</a>
+</div>
+</body>
+</html>
