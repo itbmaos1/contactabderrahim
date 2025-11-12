@@ -3,41 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mes Contacts</title>
+<title>Contact Abderrahim</title>
 <style>
-  body { font-family: Arial, sans-serif; background:#f0f0f0; margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh; }
-  .container { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2); text-align:center; width:90%; max-width:400px; }
-  h1 { margin-bottom:10px; }
-  p { margin-bottom:20px; color:#555; }
-  .btn { display:block; margin:10px auto; padding:12px 20px; border-radius:8px; color:#fff; text-decoration:none; font-weight:bold; width:80%; }
-  .fb { background:#1877f2; }
-  .ig { background:#e1306c; }
-  .ln { background:#0a66c2; }
-  .wa { background:#25D366; }
-  .vb { background:#665cac; }
-  .call { background:#27ae60; }
-  .map { background:#555; }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #d63384;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  h1 { margin-bottom: 15px; }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px auto;
+    padding: 12px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    width: 85%;
+    transition: 0.2s;
+  }
+  .btn:hover { transform: scale(1.05); }
+
+  .fb { background: #1877f2; }
+  .ig { background: #e1306c; }
+  .ln { background: #0a66c2; }
+  .wa { background: #25D366; }
+  .call { background: #27ae60; }
+  .mail { background: #ff9800; }
+  .map { background: #555; }
+
+  img.icon { width: 22px; height: 22px; }
 </style>
 </head>
 <body>
-<div class="container">
-  <h1>Mes Contacts</h1>
-  <p>Choisissez un lien :</p>
+  <div class="container">
+    <h1>Contact Orthophoniste Abderrahim Racha</h1>
 
-  <!-- Réseaux sociaux -->
-  <a class="btn fb" href="https://www.facebook.com/TON_PAGE_FB" target="_blank">Facebook</a>
-  <a class="btn ig" href="https://www.instagram.com/TON_COMPTE_IG" target="_blank">Instagram</a>
-  <a class="btn ln" href="https://www.linkedin.com/in/TON_PROFIL_LN" target="_blank">LinkedIn</a>
+    <a class="btn fb" href="https://web.facebook.com/orthophoniste.abderrahim.rh/?_rdc=1&_rdr#" target="_blank">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png"> Facebook
+    </a>
 
-  <!-- Messagerie -->
-  <a class="btn wa" href="https://wa.me/NUMERO_TEL" target="_blank">WhatsApp</a>
-  <a class="btn vb" href="viber://chat?number=%2BNUMERO_TEL" target="_blank">Viber</a>
+    <a class="btn ig" href="https://www.instagram.com/orthophoniste_abderrahim_r.h?igsh=em83M2dsYXhwM3pl" target="_blank">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"> Instagram
+    </a>
 
-  <!-- Appel téléphonique -->
-  <a class="btn call" href="tel:+NUMERO_TEL">Appeler</a>
+    <a class="btn ln" href="https://dz.linkedin.com/in/racha-hanane-abderrahim-316496233" target="_blank">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"> LinkedIn
+    </a>
 
-  <!-- Localisation -->
-  <a class="btn map" href="https://www.google.com/maps?q=LATITUDE,LONGITUDE" target="_blank">Localisation</a>
-</div>
+    <a class="btn wa" href="https://wa.me/213793532899" target="_blank">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png"> WhatsApp
+    </a>
+
+    <a class="btn call" href="#" id="callBtn">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/597/597177.png"> Appeler
+    </a>
+
+    <a class="btn mail" href="https://mail.google.com/mail/?view=cm&fs=1&to=abderrahimacademy@gmail.com" target="_blank">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png"> Email
+    </a>
+
+    <a class="btn map" href="https://maps.app.goo.gl/JPDdVPAgcXBMS6C76" target="_blank">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/854/854878.png"> Localisation
+    </a>
+  </div>
+
+  <script>
+    const callBtn = document.getElementById("callBtn");
+    callBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = "tel:+213793532899";
+      } else {
+        window.open("https://wa.me/213793532899", "_blank");
+      }
+    });
+  </script>
 </body>
 </html>
